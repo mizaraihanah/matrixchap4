@@ -9,28 +9,34 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-dark-lighter">
-    <div class="container py-5">
+<body class="bg-dark-lighter d-flex justify-content-center align-items-center" style="min-height: 100vh; margin: 0;">
+    <!-- Main Container -->
+    <div class="container py-4 px-3 text-center bg-white rounded shadow" style="max-width: 400px;">
+        <!-- Title Section -->
         <h1 class="text-primary mb-4">Matrix Operations</h1>
         
         <!-- Menu Section -->
-        <div id="menu" class="text-center mb-4">
-            <button class="btn btn-pink mx-2" onclick="transposeMatrix()">Transpose Matrix</button>
-            <button class="btn btn-pink mx-2" onclick="checkSymmetric()">Check Symmetry</button>
+        <div id="menu" class="mb-4">
+            <!-- Buttons with consistent spacing -->
+            <button class="btn btn-pink w-100 mb-2" onclick="transposeMatrix()">Transpose Matrix</button>
+            <button class="btn btn-pink w-100" onclick="checkSymmetric()">Check Symmetry</button>
         </div>
         
         <!-- Input Section -->
         <div id="input-output" class="mb-4">
-            <textarea id="matrixInput" class="form-control" placeholder="Enter matrix rows, separated by commas. e.g., 1,2,3\n4,5,6"></textarea>
+            <textarea 
+                id="matrixInput" 
+                class="form-control" 
+                placeholder="Enter matrix rows, separated by commas. e.g., 1,2,3\n4,5,6"></textarea>
         </div>
         
         <!-- Process Button -->
-        <div class="text-center">
-            <button class="btn btn-primary" onclick="processMatrix()">Process Matrix</button>
+        <div>
+            <button class="btn btn-blue w-100" onclick="processMatrix()">Process Matrix</button>
         </div>
         
         <!-- Output Section -->
-        <pre id="output" class="bg-light-cream p-3 mt-3 border rounded"></pre>
+        <pre id="output" class="bg-light-cream p-3 mt-3 border rounded" style="text-align: left; min-height: 50px;"></pre>
     </div>
 
     <!-- Bootstrap JS -->
