@@ -11,105 +11,114 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Ensures the content is vertically centered */
+    min-height: 100vh; /* Vertically center the content */
 }
 
-/* Main container to center the content */
+/* Main container */
 .container {
-    width: 90%; /* Default width */
-    max-width: 400px; /* Limit the width on larger screens */
+    width: 90%;
+    max-width: 400px; /* Keep content compact */
     background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
     padding: 20px;
     text-align: center;
 }
 
-/* Custom color themes */
-.bg-dark-lighter {
-    background-color: #eaeaea !important;
+/* Heading Styling */
+h1 {
+    color: #3c8dbc;
+    font-family: 'WinterTrendy', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
-.text-primary {
-    color: #2b6c98 !important;
+/* Button Styling */
+button {
+    font-family: 'WinterTrendy', Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 12px 20px;
+    border: none;
+    margin-bottom: 15px; /* Space between buttons */
+    width: 100%; /* Full width */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .btn-pink {
     background-color: #ff66b3;
     color: white;
-    border: none;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* Add spacing between buttons */
-    width: 100%; /* Full width on mobile */
 }
 
 .btn-pink:hover {
     background-color: #ff3385;
-    color: white;
-    cursor: pointer;
 }
 
+.btn-blue {
+    background-color: #3c8dbc;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #256b93;
+}
+
+/* Textarea Styling */
 textarea {
+    width: 100%;
     height: 120px;
     font-size: 16px;
-    color: #333;
-    border: 1px solid #ff99cc;
-    width: 100%; /* Full width on mobile */
-    margin-bottom: 15px; /* Add spacing below textarea */
-    box-sizing: border-box;
     padding: 10px;
+    border: 2px solid #ff99cc; /* Soft pink border */
+    border-radius: 10px;
+    color: #333;
+    margin-bottom: 20px;
+    resize: none; /* Disable resizing */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
 }
 
+/* Output Box Styling */
 #output {
     background-color: #f9e6f2;
-    border: 1px solid #ff99cc;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ff99cc; /* Soft pink border */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     color: #333;
     font-size: 16px;
+    padding: 15px;
+    text-align: left;
+    border-radius: 10px;
+    font-family: 'Courier New', Courier, monospace;
     white-space: pre-wrap;
     overflow-wrap: break-word;
-    padding: 15px; /* Add padding inside the output box */
-    text-align: left; /* Align text to the left */
+    min-height: 50px; /* Ensure a minimum height */
 }
 
-/* Heading Styling */
-h1 {
-    color: #ff66b3;
-    font-family: 'WinterTrendy', Arial, sans-serif;
-    font-size: 2rem; /* Adjust heading size for mobile */
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* Adjust buttons and textarea spacing */
-#menu button {
-    font-size: 16px; /* Preserve button size on PC */
-    margin-bottom: 10px;
-}
-
-#menu {
-    margin-bottom: 20px; /* Add spacing between the menu and textarea */
-}
-
-/* Responsive Styling */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .container {
-        width: 90%; /* Maintain responsive width */
+    h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller button text on mobile */
     }
 
     textarea {
-        height: 100px; /* Slightly smaller height for textarea */
-    }
-
-    .btn-pink {
-        font-size: 16px; /* Keep buttons readable */
+        font-size: 14px; /* Adjust font size for textarea */
     }
 
     #output {
-        font-size: 14px; /* Slightly smaller output text for mobile */
+        font-size: 14px; /* Adjust output text size */
     }
 }
