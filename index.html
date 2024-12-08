@@ -14,25 +14,22 @@
     <div class="container py-4 px-3 text-center bg-white rounded shadow" style="max-width: 400px;">
         <!-- Title Section -->
         <h1 class="text-primary mb-4">Matrix Operations</h1>
+              
+        <!-- Input Section -->
+        <div id="input-output" class="mb-4">
+            <textarea 
+                id="matrixInput" 
+                class="form-control" 
+                placeholder="Enter matrix rows, separated by commas. e.g., 
+                1,2,3
+                4,5,6"></textarea>
+        </div>
         
         <!-- Menu Section -->
         <div id="menu" class="mb-4">
             <!-- Buttons with consistent spacing -->
             <button class="btn btn-pink w-100 mb-2" onclick="transposeMatrix()">Transpose Matrix</button>
             <button class="btn btn-pink w-100" onclick="checkSymmetric()">Check Symmetry</button>
-        </div>
-        
-        <!-- Input Section -->
-        <div id="input-output" class="mb-4">
-            <textarea 
-                id="matrixInput" 
-                class="form-control" 
-                placeholder="Enter matrix rows, separated by commas. e.g., 1,2,3\n4,5,6"></textarea>
-        </div>
-        
-        <!-- Process Button -->
-        <div>
-            <button class="btn btn-blue w-100" onclick="processMatrix()">Process Matrix</button>
         </div>
         
         <!-- Output Section -->
